@@ -1,0 +1,7 @@
+# crear una peli 
+
+curl -X POST -H 'Content-Type: application/json' -d '{"name":"Superman","release_year":"2025","duration":"120","directior":"James Gunn","genre":"Ciencia ficcion","synopsis":"Mirala esta buena","cast":"no lo conoce nadie","movie_poster":"http://localhost:3000/images/superman.webp"}' http://localhost:3000/api/movies
+
+# agregar reseña a superman
+
+curl -X POST -H 'Content-Type: application/json' -d '{"author":"Yo","review_text":"A mi no me gusto","movie":1,"rating":2}' http://localhost:3000/api/reviews
