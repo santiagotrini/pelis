@@ -15,6 +15,9 @@ connection.connect(err => {
 }); 
 
 const app = express();
+// decirle a Express que pueda servir archivos estaticos
+// como imagenes por ejemplo
+app.use(express.static('public'))
 app.use(cors()); // no me tires error de cors xfa
 app.use(express.json()); // para parsear el JSON de los bodies
 
