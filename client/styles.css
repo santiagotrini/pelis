@@ -9,6 +9,7 @@ body {
 
 .container {
   display: grid;
+  gap: 10px;
   grid-template: repeat(4,1fr) / repeat(4,1fr);
 }
 

@@ -1,6 +1,12 @@
 # crear una peli 
 
-curl -X POST -H 'Content-Type: application/json' -d '{"name":"Superman","release_year":"2025","duration":"120","directior":"James Gunn","genre":"Ciencia ficcion","synopsis":"Mirala esta buena","cast":"no lo conoce nadie","movie_poster":"http://localhost:3000/images/superman.webp"}' http://localhost:3000/api/movies
+curl -X POST -H 'Content-Type: application/json' -d '{"name":"Superman","release_year":"2025","duration":"120","director":"James Gunn","genre":"Ciencia ficcion","synopsis":"Mirala esta buena","cast":"no lo conoce nadie","movie_poster":"http://localhost:3000/images/superman.webp"}' http://localhost:3000/api/movies
+
+curl -X POST -H 'Content-Type: application/json' -d '{"name":"E.T.","release_year":"1982","duration":90,"director":"Steven Spielberg","genre":"Ciencia ficcion","synopsis":"Mirala esta buena","cast":"Drew Barrymore","movie_poster":"http://localhost:3000/images/et.jpg"}' http://localhost:3000/api/movies
+
+
+curl -X POST -H 'Content-Type: application/json' -d '{"name":"RRR","release_year":"2022","duration":120,"director":"S.S. Rajamouli","genre":"Acción","synopsis":"Mirala esta buena","cast":"Ram Charan","movie_poster":"http://localhost:3000/images/rrr.jpg"}' http://localhost:3000/api/movies
+
 
 # agregar reseña a superman
 
