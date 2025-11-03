@@ -46,11 +46,13 @@ app.get('/api/reviews/:movie', (req, res) => {
 app.post('/api/reviews', (req, res) => {
   // pasos para crear un nuevo recurso (fila en la db)
   // 1) leer lo que viene en el body
-  const { author, review_text, movie, rating } = req.body;
+  let { author, review_text, movie, rating } = req.body;
+  // 1.5) chequear strings vacios y reemplazar por null
+  author = author || null;
+  review_text = review_text || null;
   // 2) meter esas variables en un array
   const data = [ author, review_text, movie, rating ];
   console.log(data);
-  
   // 3) hacer la query a la base de datos (un INSERT)
   connection.query('INSERT INTO reviews VALUES (NULL,?,?,?,?)', data, (err, rs) => {
     // 4) cuando termine el INSERT, responderle algo al cliente

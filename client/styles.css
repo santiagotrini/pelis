@@ -28,8 +28,12 @@ body {
   backdrop-filter: blur(8px); 
 }
 
+.movie-card h4 {
+  margin: 0;
+}
+
 .modal-content {
-  border: 1px solid black;
+  border-radius: 8px;
   background-color: white;
   display: flex;
   flex-direction: column;
