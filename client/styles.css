@@ -53,6 +53,14 @@ body {
   gap: 5px;
 }
 
+.movie-info {
+  background-color: white;
+  border-radius: 8px;
+  width: 80%;
+  height: 200px;
+  padding: 20px;
+}
+
 .movie-card h3 {
   margin: 0;
   margin-bottom: 5px;

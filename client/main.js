@@ -19,10 +19,29 @@ fetch(url+'movies')
   })
   .catch(err => console.error(err));
 
+function showMovieInfo(e) {
+  let card = e.target.parentElement;
+  let div = document.createElement('div');
+  let content = document.createElement('section');
+  content.classList.add('movie-info');
+  div.classList.add('modal');
+  div.onclick = handleClick;
+  let h3 = document.createElement('h3');
+  let p = document.createElement('p');
+  h3.textContent = card.children[0].textContent;
+  p.textContent = card.dataset.synopsis;
+  console.log(card);
+  content.append(h3, p);
+  div.append(content);
+  document.body.prepend(div);
+}
+
 function createMovieCard(movie,stars) {
-  const { id, name, movie_poster } = movie;
+  const { id, name, movie_poster, synopsis } = movie;
   let card = document.createElement('div');
+  card.dataset.synopsis = synopsis;
   let poster = document.createElement('img');
+  poster.onclick = showMovieInfo;
   let title = document.createElement('h3');
   let btn = document.createElement('button');
   let rating = document.createElement('h4');
